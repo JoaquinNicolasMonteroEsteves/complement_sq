@@ -51,7 +51,10 @@ function App() {
           <input type="text" name="sequence" id="seq_id" onKeyDown={(e) => {if(e.key === 'Enter') {Result()}}}></input>
           <div id="comp_button">
             <button id="comp_id" onClick={() => Result()}>Complementar</button>
-            <button id="comp_id" onClick={() => {document.getElementById("res_container").innerHTML = ``}}>Borrar historial</button>
+            <button id="comp_id" onClick={() => {
+              document.getElementById("res_container").innerHTML = ``
+              document.getElementById("seq_id").value = ``
+              }}>Borrar historial</button>
           </div>
         </div>
       </div>
